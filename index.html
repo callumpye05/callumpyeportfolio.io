@@ -27,19 +27,64 @@
                     <span></span>
                     <span></span>
                     <span></span>                   
-            </div>
-            <div class="menu-links">
+                </div>
+                <div class="menu-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</li>
+                <li><a href="#contact">Contact</a></li>
                 
 
             </div>
 
-
+        
         </nav>
-
+        <section id ="profile"> 
+            <div class ="section__pic-container">
+                <img src = "./assets/profile-photo.png" alt ="John doe profile picture" class="circular-image"/>
+            </div> 
+            <div class="section__text">
+                <p class ="section__text__p1">Hello, I'm</p>
+                <h1 class=title>Callum PYE</h1>
+                <p class="section__text__p2"> Aspiring Data Scientist</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download Resume</button>
+                
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://linkedin.com/'"/>
+                    <img src="./assets/github.png" alt="My Github" class="icon" onclick="location.href='https://github.com/'"/>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <p class="section__text__p1">Get to know More</p>
+            <h1 class="title">About Me</h1>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic"/>
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img src="./assets/experience.png" alt="Experience Icon" class="icon"/>
+                            <h3> Experience</h3>
+                            <p>Only a second year CS student</p>
+                        </div>
+                        <div class="details-container">
+                            <img src="./assets/education.png" alt="Education Icon" class="icon"/>
+                            <h3> Education</h3>
+                            <p>French Baccalaureat in Maths and Physics</p>
+                        </div>
+                        <div class="text-container">
+                            <p> will soon put something</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./experience'">    
+        </section>
         <script src="script.js"></script>
 
     </body>

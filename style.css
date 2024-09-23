@@ -16,6 +16,13 @@ html {
 p{
     color :black;
 }
+
+.circular-image {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Make sure the width and height are the same */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image scales properly inside the circle */
+}
 /* TRANSITION */
 
 a, .btn {
@@ -60,6 +67,9 @@ a:hover{
 .logo:hover{
     cursor:default;
 }
+
+/* HAMBURGER MENU */
+
 #hamburger.nav{
     display : none;
 }
@@ -71,10 +81,10 @@ a:hover{
 .hamburger-icon{
     display:flex;
     flex-direction: column;
-    justify-content:  space-between;
+    justify-content: space-between;
     height : 24px;
     width : 30px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .hamburger-icon span{
@@ -86,7 +96,7 @@ a:hover{
 .menu-links {
     position : absolute;
     top : 100%;
-    right :0%;
+    right :0;
     background-color: white;
     width : fit-content;
     max-height: 0;
@@ -123,5 +133,145 @@ a:hover{
     opacity :0;
 }
 .hamburger-icon.open span:last-child{
-    transform()
+    transform : rotate(-45deg) translate(10px ,-5px);
+}
+
+.hamburger-icon span:first-child{
+    transform : none;
+}
+
+.hamburger-icon span:nth-child(2){
+    opacity : 1;
+}
+.hamburger-icon span:last-child{
+    transform : none;
+}
+
+/* sections */
+
+section{
+    padding-top: 30vh;
+    height: 90vh;
+    margin: 0 10rem;
+    box-sizing : border-box;
+    min-height : fit-content;
+    text-decoration : none;
+}
+
+.section-container {
+    display : flex;
+}
+
+/* PROFILE SECTION */ 
+#profile {
+    display : flex;
+    justify-content : center;
+    gap : 5rem;
+    height : 80vh;
+}
+
+.section__pic-container {
+    display : flex;
+    height : 400px;
+    width: 400 px;
+    margin : auto 0;
+}
+.section_text {
+    align-self : center;
+    text-align : center;
+}
+
+.section__text p {
+    font-weight : 600;
+}
+.section__text__p1 {
+    text-align : center;
+}
+
+.section__text__p1 {
+    font-size: 1.75rem;
+    margin-bottom : 1rem;
+}
+
+.title {
+    font-size : 3rem;
+    text-align : center;
+}
+
+#socials-container {
+    display : flex;
+    justify-content : center;
+    margin-top : 1rem;
+    gap: 1rem;
+}
+/* ICONS  */
+
+.icon {
+    cursor : pointer;
+    height : 2rem;
+}
+
+
+/* BUTTONS */ 
+
+.btn-container {
+    display: flex;
+    justify-content : center;
+    gap : 1rem;
+}
+
+.btn {
+    font-weight : 600;
+    transition : all 300ms ease;
+    padding : 1rem;
+    width : 8rem;
+    border-radius : 2rem;
+
+}
+
+.btn-color-1, .btn-color-2 {
+    border : rgb(53,53,53) 0.1rem solid;
+}
+
+.btn-color-1:hover , .btn-color-2:hover{
+    cursor : pointer;
+}
+
+.btn-color-1, .btn-color-2:hover{
+    background : rgb(53,53,53);
+    color : white;
+}
+
+.btn-color-1:hover{
+    background : rgb(0,0,0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+/* For text in section */
+.section__text p, .title {
+    text-decoration: none;  /* Ensure no lines on text */
+}
+
+.section__text p:hover, .title:hover {
+    text-decoration: none;  /* Ensure no hover underlines */
+}
+
+.btn, .btn:hover, .btn:focus {
+    text-decoration: none;  /* No lines on buttons */
+}
+
+/* Override to remove any underline inside section__text */
+.section__text a, .section__text a:hover {
+    text-decoration: none;
 }

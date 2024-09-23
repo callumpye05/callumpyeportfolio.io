@@ -7,9 +7,12 @@
 #hamburger-nav{
     display:flex;
 }
-
-
-
-
-
+}
+@media screen and (min-width:1201px) {
+    #desktop-nav {
+        display: flex;  /* Show desktop navigation */
+    }
+    #hamburger-nav {
+        display: none;  /* Hide hamburger menu */
+    }
 }
