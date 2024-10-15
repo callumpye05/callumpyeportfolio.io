@@ -16,3 +16,9 @@
         display: none;  /* Hide hamburger menu */
     }
 }
+
+@media screen and (max-width: 768px) {
+    .article {
+        flex-basis: calc(100% - 1rem); /* Switch to one column on smaller screens */
+    }
+}
