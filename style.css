@@ -19,11 +19,15 @@ p {
   color: rgb(85, 85, 85);
 }
 
+.text-container p {
+  font-size: 1.2rem; 
+  line-height: 1.6;  
+}
 .circular-image {
-    width: 300px; /* Adjust the size as needed */
-    height: 300px; /* Make sure the width and height are the same */
-    border-radius: 50%; /* This makes the image circular */
-    object-fit: cover; /* Ensures the image scales properly inside the circle */
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%; 
+    object-fit: cover;
 }
 
 /* TRANSITION */
@@ -60,7 +64,6 @@ a {
 
 a:hover {
   color: grey;
-  text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
 }
@@ -118,7 +121,7 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu-links li {
@@ -143,14 +146,7 @@ a:hover {
 
 .hamburger-icon span:first-child {
   transform: none;
-}
-
-.hamburger-icon span:first-child {
   opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
 }
 
 /* SECTIONS */
@@ -158,7 +154,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  margin: 0 5rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -312,7 +308,7 @@ section {
 
 .section-container {
   gap: 4rem;
-  height: 80%;
+  height: auto;
 }
 
 .section__pic-container {
@@ -392,3 +388,60 @@ article .icon {
 
 
 /* CONTACT */
+
+#contact {
+  position: relative;
+  height : auto;
+  min-height: 40vh;
+  justify-content : center;
+  align-items : center;
+}
+
+.title_contact {
+  
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom : 2rem;
+}
+
+
+
+.contact-info-upper-container , .contact-info-lower-container {
+  display : flex;
+  justify-content : center;
+  gap : 2rem;
+  margin-bottom : 1.5rem;
+  flex-wrap : wrap;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center; /* vertically aligns icon and text */
+  gap: 0.5rem; /* spacing between icon and text */
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: background 0.3s;
+}
+
+.contact-info-container:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.contact-info-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.contact-info-container a:hover {
+  color: grey;
+}
+
+.adress-contact , .telephone-contact , .email-contact {
+  font-size : 1.2rem;
+}
