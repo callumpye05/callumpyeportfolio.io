@@ -30,14 +30,14 @@ p {
     object-fit: cover;
 }
 
-/* TRANSITION */
+/* TRANSITIONS FOR ALL */
 
 a,
 .btn {
   transition: all 300ms ease;
 }
 
-/* DESKTOP NAV */
+/* DESKTOP NAV PARAMS */
 
 nav,
 .nav-links {
@@ -356,7 +356,7 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
+/* PROJECT SECTION */
 
 #projects {
   position : relative;
@@ -416,8 +416,8 @@ article .icon {
 
 .contact-info-container {
   display: flex;
-  align-items: center; /* vertically aligns icon and text */
-  gap: 0.5rem; /* spacing between icon and text */
+  align-items: center; 
+  gap: 0.5rem; 
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   transition: background 0.3s;
