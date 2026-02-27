@@ -80,78 +80,54 @@
 
 
 @media screen and (max-width: 768px) {
-    
-    .article {
-        flex-basis: calc(100% - 1rem);
-    }
 
-    
     .section-container,
     .experience-details-container,
     .about-containers {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
 
-    
+    /*profile specific */
     .circular-image {
-        width: 180px;   
-        height: 180px;
-        margin-top: 2rem; 
-        margin-bottom: 1rem;
-        order: 2; 
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    
-    .section__text {
-        order: 1; 
-        text-align: center;
-    }
-
-    
-    .project-img {
-        width: 150px;
-        height: 150px;
-    }
-
-
-    .title,
-    .title_contact {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .section__text__p1 {
-        font-size: 1rem;
-    }
-
-
-    .btn {
-        width: 80%;
-        margin: 0.5rem 0;
+        width: 200px; 
+        order: -1;
     }
 
    
-    #hamburger-nav {
-        align-items: flex-end;
-        padding: 0.5rem 1rem;
+    .project-deck-container {
+        gap: 0.5rem;
+        height: auto;
+        min-height: 550px;
     }
 
-    .hamburger-icon {
-        height: 20px; 
-        width: 25px;
+    .project-deck {
+        width: 85vw;
+        height: 480px;
     }
 
-    .hamburger-icon span {
-        height: 2px;
-        background-color: black;
+    .project-card {
+        padding: 1rem;
+        transform: scale(0.9) translateX(20px); 
     }
 
-    .menu-links a {
-        font-size: 1.2rem; 
-        padding: 8px;
+    .project-img {
+        width: 100%;
+        height: 200px; 
+        object-fit: cover;
     }
+
+    .arrow-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        position: absolute;
+        bottom: -60px; 
+    }
+
+    .arrow-btn.prev { left: 25%; }
+    .arrow-btn.next { right: 25%; }
+    .title { font-size: 1.75rem; }
+    .btn { width: 100%; max-width: 200px; }
 }
