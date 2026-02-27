@@ -21,3 +21,26 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
+
+
+/* --- SCROLL REVEAL LOGIC --- */
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            
+            entry.target.classList.add('show');
+        } else {
+           
+           
+            entry.target.classList.remove('show');
+        }
+    });
+}, {
+    threshold: 0.15 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+});
