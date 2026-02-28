@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* OPTIMIZED 3d HOLOGRAPHIC TILT */
+/*OPTIMIZED 3d HOLOGRAPHIC TILT */
 
 
 const tiltCards = document.querySelectorAll('.about-containers .details-container, .experience-details-container .details-container, .text-container');
@@ -67,8 +67,6 @@ tiltCards.forEach(card => {
 
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
-        
         const rotateX = ((y - centerY) / centerY) * -4; 
         const rotateY = ((x - centerX) / centerX) * 4;
 
@@ -85,8 +83,56 @@ tiltCards.forEach(card => {
         rect = null; 
         card.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease-out';
         card.style.setProperty('--rotX', `0deg`);
-        card.style.setProperty('--rotY', `0deg`);
+        card.style.setProperty('--rotY',`0deg`);
         card.style.setProperty('--mouseX', `50%`);
-        card.style.setProperty('--mouseY', `50%`);
+        card.style.setProperty('--mouseY',`50%`);
     });
 });
+
+
+/*, tERMINAL TYPEWRITER EFFECT  */
+
+const typewriterElement = document.getElementById("typewriter");
+const words = [
+    "Third year CS student.", 
+    "C++ & Python Developer.", 
+    "ML Enthusiast.", 
+    "Architecture Designer."
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+
+    let typeSpeed= isDeleting ? 50 : 100;
+    if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000; 
+        isDeleting = true;
+    } 
+    
+    else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length; 
+        typeSpeed = 500; 
+    }
+
+    setTimeout(typeEffect, typeSpeed);
+}
+
+
+if (typewriterElement) {
+    setTimeout(typeEffect, 1000); 
+}
+
+

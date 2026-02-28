@@ -43,11 +43,11 @@
       <div class="section__text hidden">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Callum PYE</h1>
-        <p class="section__text__p2">Third year CS student</p>
+        <p class="section__text__p2"><span id="typewriter"></span><span class="cursor">|</span></p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/CALLUM-PYE-4.pdf')"
+            onclick="window.open('./assets/CV_updated.pdf')"
           >
             Download CV
           </button>
@@ -116,148 +116,33 @@
       <p class="section__text__p1">Explore My</p>
       <h1 class="title hidden">Experience</h1>
       <div class="experience-details-container hidden">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">DevOps and other skills </h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Spring Boot</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python Data Libraries</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            
+            <div class="marquee-group">
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>C++</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Spring Boot</h3><p>Basic</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Git</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>JavaScript</h3><p>Basic</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Julia</h3><p>Intermediate</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Libs</h3><p>Intermediate</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Assembly</h3><p>Basic</p></div></article>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title"> General Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Assembly</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Julia</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
+
+            <div class="marquee-group" aria-hidden="true">
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>C++</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Python</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>SQL</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Spring Boot</h3><p>Basic</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Git</h3><p>Experienced</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>JavaScript</h3><p>Basic</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Julia</h3><p>Intermediate</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Data Libs</h3><p>Intermediate</p></div></article>
+              <article class="skill-card"><img src="./assets/checkmark.png" class="icon" /><div><h3>Assembly</h3><p>Basic</p></div></article>
             </div>
+
           </div>
         </div>
       </div>
@@ -283,7 +168,22 @@
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/callumpye05/compil'">Github</button>
             </div>
           </div>
-    
+          <div class="details-container color-container project-card">
+            <img src="./assets/Graph.png" alt="Graph Risk Engine" class="project-img" />
+            <h2 class="experience-sub-title project-title">Graph Risk Engine</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/callumpye05/graph-risk-engine'">Github</button>
+            </div>
+          </div>
+
+          <div class="details-container color-container project-card">
+            <img src="./assets/ML.png" alt="Machine Learning Models" class="project-img" />
+            <h2 class="experience-sub-title project-title">ML Image Models</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/callumpye05/cifar-vision-classifier'">Github</button>
+            </div>
+          </div>
+
           <div class="details-container color-container project-card">
             <img src="./assets/Screenshot 2025-09-14 at 14.49.13.png" alt="Project 2" class="project-img" />
             <h2 class="experience-sub-title project-title">Monopoly Project</h2>
@@ -318,7 +218,8 @@
         </div>
       </div>
     </section>
-   
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
     <script src="script.js"></script>
   </body>
 </html>
