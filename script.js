@@ -136,3 +136,67 @@ if (typewriterElement) {
 }
 
 
+
+/* --LIVE TERMINAL LOGIC--- */
+document.addEventListener('DOMContentLoaded', () => {
+    const inputField = document.getElementById('terminal-input');
+    const outputArea = document.getElementById('terminal-output');
+    const terminalBody = document.getElementById('terminal-body');
+
+    
+    const commands = {
+        'help': `Available commands: <br>
+                 <span class="highlight">whoami</span> - Learn about me<br>
+                 <span class="highlight">skills</span> - View my tech stack<br>
+                 <span class="highlight">projects</span> - See what I've built<br>
+                 <span class="highlight">clear</span> - Clear the terminal`,
+        
+        'whoami': `Callum PYE. Third-year Computer Science student at Nantes University. <br>
+                   Aspiring Software Architect & Data Scientist. Bilingual (English/French).`,
+        
+        'skills': `Languages: C++, Python, Java, SQL, JavaScript<br>
+                   Tools: Git, Spring Boot, Bison/Yacc, Scikit-learn, OpenCV`,
+        
+        'projects': `1. Graph Risk Engine (Python, NetworkX)<br>
+                     2. Custom Compiler (C++, Bison)<br>
+                     3. Monopoly POO (Java)<br>
+                     Type 'help' to return.`,
+    };
+
+    if(inputField) {
+        inputField.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                const command = inputField.value.trim().toLowerCase();
+                
+                
+                const echoLine = document.createElement('p');
+                echoLine.innerHTML = `<span class="prompt">callum@portfolio:~$</span> ${command}`;
+                outputArea.appendChild(echoLine);
+
+                
+                if (command === 'clear') {
+                    outputArea.innerHTML = ''; 
+                } else if (commands[command]) {
+                    const response = document.createElement('p');
+                    response.innerHTML = commands[command];
+                    outputArea.appendChild(response);
+                } else if (command !== '') {
+                    const errorLine = document.createElement('p');
+                    errorLine.innerHTML = `Command not found: ${command}. Type <span class="highlight">'help'</span> for a list of commands.`;
+                    outputArea.appendChild(errorLine);
+                }
+
+                
+                inputField.value = ''; 
+                terminalBody.scrollTop = terminalBody.scrollHeight; 
+            }
+        });
+        
+        
+        terminalBody.addEventListener('click', () => {
+            inputField.focus();
+        });
+    }
+});
+
+
