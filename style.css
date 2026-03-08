@@ -16,6 +16,17 @@ body {
   color: #333;
 }
 
+/* CANVAS BACKGROUND */
+#network-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Keeps it behind your glassmorphism cards */
+  pointer-events: none; /* Ensures you can still click buttons through it */
+}
+
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -839,4 +850,128 @@ section {
 }
 .terminal-body::-webkit-scrollbar-thumb:hover {
   background: rgba(10, 42, 94, 0.4);
+}
+
+body.hacker-mode {
+  background: #050505 !important;
+  animation: none !important; 
+  color: #00ff41 !important;
+  transition: background 1s ease, color 0.5s ease;
+}
+
+body.hacker-mode p, 
+body.hacker-mode h3, 
+body.hacker-mode h2, 
+body.hacker-mode .section__text__p1 {
+  color: #00ff41 !important;
+}
+
+body.hacker-mode .title, 
+body.hacker-mode .logo,
+body.hacker-mode .title_contact {
+  background: none;
+  -webkit-text-fill-color: #00ff41;
+  text-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+  letter-spacing: 2px;
+}
+
+body.hacker-mode .details-container,
+body.hacker-mode .terminal-window,
+body.hacker-mode .marquee-wrapper,
+body.hacker-mode .skill-card {
+  background: rgba(0, 20, 0, 0.7) !important;
+  border: 1px solid #00ff41 !important;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1) !important;
+  backdrop-filter: blur(8px);
+}
+
+body.hacker-mode .btn {
+  background: transparent;
+  color: #00ff41;
+  border: 1px solid #00ff41;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+body.hacker-mode .btn:hover {
+  background: #00ff41;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+}
+
+body.hacker-mode #terminal-input,
+body.hacker-mode .terminal-output p {
+  color: #00ff41 !important;
+}
+
+body.hacker-mode .highlight {
+  color: #fff !important;
+  text-shadow: 0 0 5px #fff;
+}
+
+
+body.hacker-mode, 
+body.hacker-mode .btn,
+body.hacker-mode .nav-links a {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
+body.hacker-mode img,
+body.hacker-mode .icon,
+body.hacker-mode .circular-image,
+body.hacker-mode .project-img {
+  filter: grayscale(100%) sepia(100%) hue-rotate(70deg) saturate(300%) contrast(1.2) !important;
+  opacity: 0.8;
+}
+
+body.hacker-mode .nav-links a::after {
+  background: #00ff41 !important;
+}
+
+
+body.hacker-mode .arrow-btn {
+  background: rgba(0, 20, 0, 0.9) !important;
+  border: 1px solid #00ff41 !important;
+  color: #00ff41 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2) !important;
+}
+
+body.hacker-mode .arrow-btn:hover {
+  background: #00ff41 !important;
+  color: black !important;
+}
+
+body.hacker-mode #typewriter,
+body.hacker-mode .cursor {
+  color: #00ff41 !important;
+}
+
+
+body.hacker-mode a,
+body.hacker-mode .nav-links a,
+body.hacker-mode .menu-links a,
+body.hacker-mode .contact-info-container a {
+  color: #00ff41 !important;
+  transition: all 0.3s ease;
+}
+
+body.hacker-mode a:hover,
+body.hacker-mode .nav-links a:hover,
+body.hacker-mode .menu-links a:hover,
+body.hacker-mode .contact-info-container a:hover {
+  color: #fff !important; 
+  text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41 !important; 
+}
+
+
+body.hacker-mode .contact-info-container:hover {
+  background-color: rgba(0, 255, 65, 0.1) !important;
+  border: 1px dashed #00ff41 !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+
+
+/* --- NEURAL PULSE GLOW */
+.pulse-active {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.8)) drop-shadow(0 0 20px rgba(0, 255, 65, 0.4));
 }
